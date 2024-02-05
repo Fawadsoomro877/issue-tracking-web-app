@@ -12,7 +12,7 @@ const navLinks = [
 const NavBar = () => {
   const currentPath = usePathname();
   return (
-    <nav className="flex items-center gap-6 p-6">
+    <nav className="flex items-center gap-6 p-6 mb-4 border-b">
       <Link href="/">
         <FaBug />
       </Link>
