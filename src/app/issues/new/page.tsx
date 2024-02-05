@@ -9,7 +9,7 @@ import { MdErrorOutline } from "react-icons/md";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { createIssueSchema } from "@/app/validationSchemas";
+import { createIssueSchema } from "@/lib/validationSchemas";
 import ErrorMessage from "@/components/ErrorMessage";
 import Spinner from "@/components/Spinner";
 // interface IssueForm {
