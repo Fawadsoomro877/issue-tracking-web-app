@@ -1,6 +1,6 @@
 "use client";
 import { Button, Callout, Text, TextArea, TextField } from "@radix-ui/themes";
-import SimpleMDE from "react-simplemde-editor";
+import dynamic from "next/dynamic";
 import "easymde/dist/easymde.min.css";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import axios from "axios";
@@ -12,6 +12,11 @@ import { z } from "zod";
 import { createIssueSchema } from "@/lib/validationSchemas";
 import ErrorMessage from "@/components/ErrorMessage";
 import Spinner from "@/components/Spinner";
+
+// Disabling ssr for this function. Not to render on the server. Instead, directly on client
+const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
+  ssr: false,
+});
 // interface IssueForm {
 //   title: string;
 //   description: string;
