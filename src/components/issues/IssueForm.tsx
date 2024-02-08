@@ -6,17 +6,13 @@ import { Issue } from "@prisma/client";
 import { Button, Callout, TextField } from "@radix-ui/themes";
 import axios from "axios";
 import "easymde/dist/easymde.min.css";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { MdErrorOutline } from "react-icons/md";
+import SimpleMDE from "react-simplemde-editor";
 import { z } from "zod";
-
 // Disabling ssr for this function. Not to render on the server. Instead, directly on client
-const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
-  ssr: false,
-});
 // interface IssueForm {
 //   title: string;
 //   description: string;
